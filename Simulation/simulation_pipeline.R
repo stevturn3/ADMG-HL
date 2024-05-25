@@ -15,7 +15,7 @@ setting_acrossp <- function()
 
 setting_acrossn <- function()
 {
-#res_n = sim_across_param(c(50,100, 500, 1000, 5000, 10000), 50, max_iter = 50, p = 10, sim_over = "n", save = "acrossn_")
+  res_n = sim_across_param(c(50,100, 500, 1000, 5000, 10000), 50, max_iter = 50, p = 10, sim_over = "n", save = "acrossn_")
   plot1 = gg_display(res_n$epec_bic_diff, lapply(res_n$var_bic_diff, function(x) sqrt(x)), seq = log(c(50,100,500,1000,5000,10000)), sim_over = "n")
   plot2 = gg_display(res_n$f1, lapply(res_n$fl_var, function(x) sqrt(x)), c(50,100,500,1000,5000,10000), bar = T, metric_title = "F1 Score")
   plot3 = display_one_sim(c('./res_acrossn_50', './res_acrossn_100', './res_acrossn_500', './res_acrossn_1000', './res_acrossn_5000', 'res_acrossn_10000'), "times", c(50,100,500,1000,5000,10000), n = NULL, title = "",  xlab = "metric", metric_title = "time(log seconds) ", no_diff = T, log_v = T)
