@@ -5,6 +5,8 @@ Often casual bayesian networks contain variables that we cannot observe or measu
 
 For results and a detailed description of the algorithm, please read: 
 
+# To run simulations, call the functions in Simulation/simulation_pipeline.R
+
 
 
 
