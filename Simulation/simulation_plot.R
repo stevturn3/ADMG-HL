@@ -165,7 +165,7 @@ gg_display = function(metric, metric_sd, seq, sim_over = "log(n)",
                            fill = variable,
                            label = round(value.x, 2))) + 
       geom_bar(stat = "identity") + 
-      facet_wrap(~ seq, ncol=3) +
+      facet_wrap(~ seq, ncol=3, scales = "free") +
       geom_errorbar() + 
       labs(x = sim_over, y = metric_title, title = title, fill = "method")  + 
       theme_bw(base_size = 12, base_family = "Helvetica") + 
