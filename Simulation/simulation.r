@@ -504,9 +504,3 @@ sim_across_param = function(sim_range,
   metrics = gather_metrics(sim_results)
   return(metrics)
 }
-
-res_p = sim_across_param(c(5), 2, save = "tol_", verbose = T)
-
-res_p = sim_across_param(c(5,10, 15, 20, 30), 50, save = "tol_", verbose = T)
-res_p_small_n = sim_across_param(c(5,10, 15, 20, 30), 50, n = 100, save = "smalln_")
-res_n = sim_across_param(c(50,100, 500, 1000, 5000, 10000), 50, max_iter = 50, p = 10, sim_over = "n", save = "acrossn_")
