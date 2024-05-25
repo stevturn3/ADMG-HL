@@ -196,5 +196,5 @@ gg_display = function(metric, metric_sd, seq, sim_over = "log(n)",
                 legend.title=element_text(size=20),
                 legend.text=element_text(size=14))
   }
-  print(gfg_plot)
+  return(gfg_plot)
 }
